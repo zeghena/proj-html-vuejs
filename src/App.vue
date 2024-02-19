@@ -1,11 +1,13 @@
 <script setup>
-import ToolBar from "./components/ToolBar.vue";
+import AppHeaderInsurance from "./components/AppHeaderInsurance.vue";
 </script>
 
 <template>
   <div>
-    <ToolBar />
+    <AppHeaderInsurance />
   </div>
 </template>
 
-<style scoped></style>
+<style lang="scss">
+@use "./styles/general.scss";
+</style>
