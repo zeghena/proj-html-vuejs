@@ -2,31 +2,36 @@
 
 <template>
   <!-- ###top header  -->
-  <!-- <div class="top">
-    <nav class="navbar bg-black">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Fixed top</a>
-      </div>
-    </nav>
-  </div> -->
-
-  <!-- ###top header 2 -->
   <div class="top">
-    <div>
-      <span>Opern-Hours: Mon-Sat - 9:00-18:00</span>
+    <div class="hour">
+      <div>
+        <i class="fa-solid fa-clock"></i>
+      </div>
+      <div>
+        <span>Open-Hours: Mon-Sat - 9:00-18:00</span>
+      </div>
     </div>
     <div class="social-logo">
+      <div>
+        <i class="fa-solid fa-phone"></i>
+      </div>
       <div>
         <span>+1(305)1234-5678</span>
       </div>
       <div>
-        <span>...</span>
+        <i class="fa-solid fa-envelope"></i>
       </div>
       <div>
-        <span>...</span>
+        <span>hello@example.com</span>
       </div>
       <div>
-        <span>...</span>
+        <i class="fa-brands fa-facebook-f"></i>
+      </div>
+      <div>
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+      <div>
+        <i class="fa-brands fa-linkedin-in"></i>
       </div>
     </div>
   </div>
@@ -34,33 +39,34 @@
   <!-- #### header  -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div>
-      <div class="navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav mb-lg-0">
-          <li>
-            <a class="nav-link" href="#">HOME</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#">ABOUT</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#">SERVICES</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#">PROCESS</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#">TEAM</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#">BLOG</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <button class="btn btn-outline-success" type="submit">
-            GET IN TOUCH
-          </button>
-        </form>
-      </div>
+      <img class="logo" src="/img/nexgen-logo.svg" />
+    </div>
+    <div class="navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mb-lg-0">
+        <li>
+          <a class="nav-link" href="#">HOME</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">ABOUT</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">SERVICES</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">PROCESS</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">TEAM</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">BLOG</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <button class="btn btn-outline-success" type="submit">
+          GET IN TOUCH
+        </button>
+      </form>
     </div>
   </nav>
   <div class="headInsurance">
@@ -94,9 +100,21 @@
   background-color: #132e43;
   padding: 10px;
   display: flex;
+  justify-content: space-around;
+}
+.hour {
+  display: flex;
+  gap: 10px;
+}
+.logo {
+  width: 120px;
+}
+.navbar {
+  display: flex;
 }
 .social-logo {
   display: flex;
+  gap: 10px;
 }
 .headInsurance {
   width: 100%;
