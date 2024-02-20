@@ -95,6 +95,6 @@
   padding: 10px;
 }
 .littlefont {
-  font-size: smaller;
+  font-weight: lighter;
 }
 </style>
