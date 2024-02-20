@@ -3,7 +3,7 @@
 <template>
   <div class="container2">
     <div class="text-left">
-      <p class="minititle">ABOUT THE NETWORK</p>
+      <p class="minititle littlefont">ABOUT THE NETWORK</p>
       <h1 class="title">The Company</h1>
       <p class="littlefont">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere,
