@@ -91,7 +91,6 @@
       </div>
     </div>
   </div>
-  Puppamelo
 </template>
 
 <style>
