@@ -1,4 +1,33 @@
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      cards: [
+        {
+          title: "Tradition",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          title: "Security",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          title: "Certificate",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+        {
+          title: "Expertice",
+          description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        },
+      ],
+    };
+  },
+};
+</script>
 
 <template>
   <div class="container2">
@@ -15,40 +44,13 @@
       </p>
     </div>
     <div class="text-card">
-      <div class="paragraph">
+      <div v-for="card in cards" class="paragraph">
         <div class="minititle2">
           <i class="fa-solid fa-gift"></i>
-          <h4 class="title2">Tradition</h4>
+          <h4 class="title2">{{ card.title }}</h4>
         </div>
         <p class="littlefont">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-      </div>
-      <div class="paragraph">
-        <div class="minititle2">
-          <i class="fa-solid fa-lock"></i>
-          <h4 class="title2">Security</h4>
-        </div>
-        <p class="littlefont">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-      </div>
-      <div class="paragraph">
-        <div class="minititle2">
-          <i class="fa-solid fa-pen-to-square"></i>
-          <h4 class="title2">Certificate</h4>
-        </div>
-        <p class="littlefont">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-      </div>
-      <div class="paragraph">
-        <div class="minititle2">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <h4 class="title2">Expertice</h4>
-        </div>
-        <p class="littlefont">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          {{ card.description }}
         </p>
       </div>
     </div>
@@ -82,7 +84,7 @@
   color: white;
 }
 .text-card {
-  width: 50%;
+  width: 40%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

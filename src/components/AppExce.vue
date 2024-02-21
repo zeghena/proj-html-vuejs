@@ -1,4 +1,53 @@
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      cards: {
+        top: [
+          {
+            title: "Audit & Assurance",
+            description:
+              "Some quick example text to build on the card title content.",
+            icon: "fa-regular fa-folder-open",
+          },
+          {
+            title: "Financial Advisory",
+            description:
+              "Some quick example text to build on the card title content.",
+            icon: "fa-solid fa-network-wired",
+          },
+          {
+            title: "Analytics and M&A",
+            description:
+              "Some quick example text to build on the card title content.",
+            icon: "fa-solid fa-briefcase",
+          },
+        ],
+        bottom: [
+          {
+            title: "Middle and Marketing",
+            description:
+              "Some quick example text to build on the card title content.",
+            icon: "fa-regular fa-paper-plane",
+          },
+          {
+            title: "Legal Consulting",
+            description:
+              "Some quick example text to build on the card title content.",
+            icon: "fa-solid fa-chart-simple",
+          },
+          {
+            title: "Regulatory Risk",
+            description:
+              "Some quick example text to build on the card title content.",
+            icon: "fa-solid fa-globe",
+          },
+        ],
+      },
+    };
+  },
+};
+</script>
 
 <template>
   <div class="comp-exce">
@@ -21,106 +70,23 @@
         </div>
       </div>
       <div class="portacard">
-        <div class="card" style="width: 15rem">
-          <div class="card-body">
-            <div class="icon-card">
-              <a href="#" class="card-link"
-                ><i class="fa-solid fa-network-wired"></i
-              ></a>
-              <a href="#" class="card-link"
-                ><i class="fa-solid fa-arrow-right"></i
-              ></a>
+        <div
+          v-for="row in cards"
+          class="d-flex justify-content-center gap-5 mt-5"
+        >
+          <div v-for="card in row" class="card" style="width: 15rem">
+            <div class="card-body">
+              <div class="icon-card">
+                <i :class="card.icon"></i>
+                <a href="#" class="card-link"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+              <h5 class="card-title">{{ card.title }}</h5>
+              <p class="card-text">
+                {{ card.description }}
+              </p>
             </div>
-            <h5 class="card-title">Audit & Assurance</h5>
-
-            <p class="card-text">
-              Some quick example text to build on the card title content.
-            </p>
-          </div>
-        </div>
-        <div class="card" style="width: 15rem">
-          <div class="card-body">
-            <div class="icon-card">
-              <a href="#" class="card-link"
-                ><i class="fa-solid fa-network-wired"></i
-              ></a>
-              <a href="#" class="card-link"
-                ><i class="fa-solid fa-arrow-right"></i
-              ></a>
-            </div>
-            <h5 class="card-title">Audit & Assurance</h5>
-
-            <p class="card-text">
-              Some quick example text to build on the card title content.
-            </p>
-          </div>
-        </div>
-        <div class="card" style="width: 15rem">
-          <div class="card-body">
-            <div class="icon-card">
-              <a href="#" class="card-link"
-                ><i class="fa-solid fa-network-wired"></i
-              ></a>
-              <a href="#" class="card-link"
-                ><i class="fa-solid fa-arrow-right"></i
-              ></a>
-            </div>
-            <h5 class="card-title">Audit & Assurance</h5>
-
-            <p class="card-text">
-              Some quick example text to build on the card title content.
-            </p>
-          </div>
-        </div>
-        <div class="card" style="width: 15rem">
-          <div class="card-body">
-            <div class="icon-card">
-              <a href="#" class="card-link"
-                ><i class="fa-solid fa-network-wired"></i
-              ></a>
-              <a href="#" class="card-link"
-                ><i class="fa-solid fa-arrow-right"></i
-              ></a>
-            </div>
-            <h5 class="card-title">Audit & Assurance</h5>
-
-            <p class="card-text">
-              Some quick example text to build on the card title content.
-            </p>
-          </div>
-        </div>
-        <div class="card" style="width: 15rem">
-          <div class="card-body">
-            <div class="icon-card">
-              <a href="#" class="card-link"
-                ><i class="fa-solid fa-network-wired"></i
-              ></a>
-              <a href="#" class="card-link"
-                ><i class="fa-solid fa-arrow-right"></i
-              ></a>
-            </div>
-            <h5 class="card-title">Audit & Assurance</h5>
-
-            <p class="card-text">
-              Some quick example text to build on the card title content.
-            </p>
-          </div>
-        </div>
-        <div class="card" style="width: 15rem">
-          <div class="card-body">
-            <div class="icon-card">
-              <a href="#" class="card-link"
-                ><i class="fa-solid fa-network-wired"></i
-              ></a>
-              <a href="#" class="card-link"
-                ><i class="fa-solid fa-arrow-right"></i
-              ></a>
-            </div>
-            <h5 class="card-title">Audit & Assurance</h5>
-
-            <p class="card-text">
-              Some quick example text to build on the card title content.
-            </p>
           </div>
         </div>
       </div>
@@ -131,15 +97,11 @@
 <style>
 .comp-exce {
   width: 100%;
-  height: 600px;
+
   background-color: rgb(238, 244, 237);
 }
 .container {
   padding: 50px;
-  margin-top: 50px;
-  margin-left: 70px;
-  margin-right: 70px;
-  border: 1px solid red;
 }
 .title {
   font-weight: bold;
@@ -156,5 +118,6 @@
 .portacard {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 </style>
